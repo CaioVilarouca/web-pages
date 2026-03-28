@@ -1,0 +1,14 @@
+:root {
+  /* Backgrounds */
+  --primary-color: #1d1d1d;
+  --secondary-color: #F2F4F7;
+  --tertiary-color: #333333;
+
+  /* Textos/ícones/links */
+  --primary-color-text: #333333;
+  --secondary-color-text: #dddddd;
+
+  /* Cor primary*/
+  --white-color: #fff;
+  --black-color: #000;
+}

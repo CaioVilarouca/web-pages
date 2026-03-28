@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Paleta de cor-->
+  <link rel="stylesheet" href="css/color.css">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css">
+  <!-- Icon Url -->
+  <link rel="shortcut icon" href="img/logoWhite.png" type="image/x-icon">
+  <title>Admin</title>
+</head>
+<body>
+  <div class="wrapper">
+    <aside id="sidebar">
+      <div class="d-flex justify-content-between p-4">
+
+        <div class="sidebar-logo">
+          <img src="img/logoWhite.png" alt="logo">
+            <div class="sidebar-title">
+                <h3><span>IGREJA</span><br>SOBRENATURAL</h3>
+            </div>
+        </div>
+
+        <!-- Hamburguer -->
+         <button class="toggle-btn border-0" type="button">
+          <i id="icon" class="ri-arrow-right-double-fill"></i>
+        </button>
+      </div>
+
+      <ul class="sidebar-nav">
+        <!-- Início -->
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link">
+            <i class="ri-id-card-line"></i>
+            <span>Início</span>
+          </a>
+        </li>
+        <!-- Geral -->
+        <li class="sidebar-item">
+          <a class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#geral" aria-expanded="false" aria-controls="geral" href="#">
+            <i class="ri-menu-unfold-line"></i>
+            <span>Geral</span>
+          </a>
+          <!-- Collapse -->
+           <ul id="geral" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Lista de Avisos</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Lista de Palavras</a>
+              </li>
+           </ul>
+        </li>
+        <!-- Universidade da vida -->
+        <li class="sidebar-item">
+          <a class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#universidade" aria-expanded="false" aria-controls="universidade" href="#">
+            <i class="ri-graduation-cap-line"></i>
+            <span>Universidade da vida</span>
+          </a>
+          <ul id="universidade" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">Cursando</a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">Resultado</a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">Faltas</a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">Ofertas</a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="#">Presenças</a>
+            </li>
+          </ul>
+        </li>
+        <!-- Cadastro -->
+        <li class="sidebar-item">
+          <a class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#cadastro" aria-expanded="false" aria-controls="cadastro" href="#">
+            <i class="ri-file-add-line"></i>
+            <span>Cadastro</span>
+          </a>
+          <ul id="cadastro" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+            <li class="sidebar-item">
+              <a class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#cadastroSub" aria-expanded="false" aria-controls="cadastroSub" href="#">
+              Novo Cadastro
+              </a>
+              <!-- Sub Collapse -->
+              <ul id="cadastroSub" class="sidebar-dropdown list-unstyled collapse">
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">Presenças e Faltas</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">Turma</a>
+                </li>
+                <li class="sidebar-item">
+                  <a class="sidebar-link" href="#">Alunos</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <!-- Pastoral -->
+        <li class="sidebar-item">
+          <a class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#pastoral" aria-expanded="false" aria-controls="pastoral" href="#">
+            <i class="ri-presentation-line"></i>
+            <span>Pastoral</span>
+          </a>
+          <!-- Collapse -->
+           <ul id="pastoral" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Total de Células</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Total de Consolidação</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Total de Escola</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Total de Ofertas</a>
+              </li>
+           </ul>
+        </li>
+        <!-- Célula -->
+        <li class="sidebar-item">
+          <a class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#celula" aria-expanded="false" aria-controls="celula" href="#">
+            <i class="ri-group-line"></i>
+            <span>Célula</span>
+          </a>
+          <!-- Collapse -->
+           <ul id="celula" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Lista</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Discípulos</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Supervisão Ministerial</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Ofertas</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Cadastro</a>
+              </li>
+           </ul>
+        </li>
+        <!-- Consolidação -->
+        <li class="sidebar-item">
+          <a class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#consolidacao" aria-expanded="false" aria-controls="consolidacao" href="#" >
+            <i class="ri-shake-hands-line"></i>
+            <span>Consolidação</span>
+          </a>
+          <!-- Collapse -->
+           <ul id="consolidacao" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Cadastro</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Fono e Visita</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Resultado</a>
+              </li>
+              <li class="sidebar-item">
+                <a class="sidebar-link" href="#">Resultado Geral</a>
+              </li>
+           </ul>
+        </li>
+      </ul>
+      <!-- Exit -->
+       <div class="sidebar-footer">
+          <a class="sidebar-link" href="pages/login.html">
+            <i class="ri-logout-box-line"></i>
+            <span>Sair</span>
+          </a>
+       </div>
+    </aside>
+
+    <!-- Conteúdo-->
+    <div class="main">
+
+      <!-- Navbar Barra de pesquisa -->
+      <nav class="navbar navbar-expand px-4 px-3">
+        <form action="#" class="d-none d-sm-inline-block">
+          <div class="input-group input-group-navbar">
+            <input type="text" class="form-control border-0 pe-0" placeholder="Pesquisa..." aria-label="Search">
+              <button class="btn border-0" type="button">
+                <i class="ri-search-line"></i>
+              </button>
+          </div>
+        </form>
+
+        <!-- Perfil -->
+         <div class="navbar-collapse collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                <img src="img/logoBlack.png" alt="avatar" class="avatar img-fluid">
+                <div class="dropdown-menu dropdown-menu-end rounded-0 border-0 shadow mt-3">
+                  <a href="#" class="dropdown-item">
+                    <i class="ri-database-2-line"></i>
+                    <span>Analise</span>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <i class="ri-settings-4-line"></i>
+                    <span>Config</span>
+                  </a>
+                  <a href="#" class="dropdown-item">
+                    <i class="ri-brush-line"></i>
+                    <span>Tema</span>
+                  </a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- / Perfil -->
+      </nav>
+      <!-- / Navbar -->
+
+      <!-- Conteudo Main-->
+      <main class="content px-3 py-4">
+        <div class="container-fluid">
+          <div class="mb-3">
+
+            <h3 class="fw-bold fs-4 mb-3">
+              Dashboard
+            </h3>
+
+            <div class="row">
+
+              <!--Celula -->
+              <div class="col-12 col-md-3">
+                <div class="card shadow">
+                  <div class="card-body py-4">
+                    
+                    <!-- Cabeçalho -->
+                    <div class="d-flex flex-column justify-content-center align-items-center title">
+                    <i class="icon ri-group-line fs-3 mb-1"></i>
+                    <h5 class="mb-3 fw-bold">Células</h5>
+                    </div>
+                    
+                    <div class="mb-0">
+                      <span>Número de células:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+                    <div class="mb-0">
+                      <span>Número de pessoas:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+
+
+                    <div class="fw-bold mb-2 text-center mt-4">
+                      <span class="btn btn-sm btn-dark fw-semibold">
+                          <i class="ri-arrow-right-line"></i>
+                          Sabia mais
+                          <i class="ri-arrow-left-line"></i>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <!--Consolidados -->
+              <div class="col-12 col-md-3">
+                <div class="card shadow">
+                  <div class="card-body py-4">
+                    
+                    <!-- Cabeçalho -->
+                    <div class="d-flex flex-column justify-content-center align-items-center title">
+                      <i class="me-1 icon ri-shake-hands-line fs-3"></i>
+                      <h5 class="mb-3 fw-bold">Consolidados</h5>
+                    </div>
+                    
+                    <div class="mb-0">
+                      <span>Consolidados:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+                    <div class="mb-0">
+                      <span>Não consolidados:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+
+
+                    <div class="fw-bold mb-2 text-center mt-4">
+                      <span class="btn btn-sm btn-dark fw-semibold">
+                          <i class="ri-arrow-right-line"></i>
+                          Sabia mais
+                          <i class="ri-arrow-left-line"></i>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <!--Alunos UV -->
+              <div class="col-12 col-md-3">
+                <div class="card shadow">
+                  <div class="card-body py-4">
+                    
+                    <!-- Cabeçalho -->
+                    <div class="d-flex flex-column justify-content-center align-items-center title">
+                      <i class="me-1 icon ri-git-repository-line fs-3"></i>
+                      <h5 class="mb-3 fw-bold">Alunos UV</h5>
+                    </div>
+                    
+                    <div class="mb-0">
+                      <span>Escrito no encontro:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+                    <div class="mb-0">
+                      <span>Não escrito:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+
+
+                    <div class="fw-bold mb-2 text-center mt-4">
+                      <span class="btn btn-sm btn-dark fw-semibold">
+                          <i class="ri-arrow-right-line"></i>
+                          Sabia mais
+                          <i class="ri-arrow-left-line"></i>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <!--Presenças -->
+              <div class="col-12 col-md-3">
+                <div class="card shadow">
+                  <div class="card-body py-4">
+                    
+                    <!-- Cabeçalho -->
+                    <div class="d-flex flex-column justify-content-center align-items-center title">
+                      <i class="me-1 icon ri-line-chart-line fs-3"></i>
+                      <h5 class="mb-03 fw-bold">Presenças</h5>
+                    </div>
+                    
+                    <div class="mb-1">
+                      <span>Número de presenças:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+                    <div class="mb-1">
+                      <span>Número de faltas:</span>
+                      <span class="badge text-success me-2">0</span>
+                    </div>
+
+
+                    <div class="fw-bold mb-2 text-center mt-4">
+                      <span class="btn btn-sm btn-dark fw-semibold">
+                          <i class="ri-arrow-right-line"></i>
+                          Sabia mais
+                          <i class="ri-arrow-left-line"></i>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- \ Conteudo Main-->
+
+      <footer>
+        <div class="container-fluid">
+          <div class="row text-body-secondary">
+            <div class="col-sm-6 text-start">
+              <strong>&copy; Igreja Batista Sobrenatural</strong>. Todos os direitos reservados
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous">
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
