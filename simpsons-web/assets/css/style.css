@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+:root {
+    --color-primary:#ff0000;
+    --color-primary-backgroud:#f7b600;
+    --color-secondary: #f0e9e9;
+}
+
+body{
+    background-color: #f7f7f7;
+}
+
+header .logo img {
+    width: 72px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 12vh;
+    background-color: var(--color-primary-backgroud);
+    user-select: none;
+}
+
+header .navbar {
+    display: flex;
+    list-style: none;
+}
+
+header .navbar li {
+    letter-spacing: 3px;
+    margin: 0 5px;
+}
+
+header .navbar a {
+    color: var(--color-primary);
+    text-decoration:none;
+    padding: 5px 10px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+}
+
+header .navbar a:hover {
+    transition: 3ms;
+    border: solid 1px var(--color-secondary);
+    color: var(--color-secondary);
+    box-shadow: 1px 1px 1px rgba(255, 0, 0, 0.5);
+}
+
+/* link principal*/
+header .navbar .primary {
+    transition: 3ms;
+    border: solid 1px var(--color-secondary);
+    color: var(--color-secondary);
+    box-shadow: 1px 1px 1px rgba(255, 0, 0, 0.5);
+}
+
+header .navbar .primary:hover{
+    color: var(--color-primary);
+    text-decoration:none;
+    padding: 5px 10px;
+    border: solid 1px transparent;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 3ms;
+}
+
+/*Sobre mim */
+.about .flex {
+    padding: 10vmin 20vmin 20vmin 20vmin;
+    user-select: none;
+    display: flex;
+}
+
+.about .div-about .img-about img {
+    border-radius: 0.5em;
+    width: 550px;
+    height: 480px;
+}
+
+.about .div-about:last-child {
+    position: relative;
+}
+
+.about .div-about .text-right {
+    position: relative;
+    top: 5vmin;
+    left: -7vmin;    
+    background-color: #fff;
+    box-shadow: 25px 35px 50px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    padding: 10vmin 8vmin 10vmin 12vmin;
+}
+
+.about .div-about .text-right h1 {
+    padding-bottom: 0.4em ;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.about .div-about .text-right p {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    padding-bottom: 0.4em ;
+}
+
+.about .div-about .text-right span {
+    font-weight: bolder;
+}
+
+/*Personagens Principais*/
+.main-characters .head-main-characters {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.main-characters  .flex {
+    padding: 10vmin 0;
+    user-select: none;
+    display: flex;
+}
+
+.main-characters .flex .img img {
+    width: 150px;
+    height: 150px;
+    padding: 10px 10px 0 10px;
+    border-radius: 7px;
+    margin: 0 10px 0 10px ;
+    background-color: var(--color-primary-backgroud);
+}
+
+.main-characters .flex .post {
+    text-align: center;
+    font-weight: 700;
+}
+
+/*blog*/
+.post-index {
+    width: 920px;
+    margin: 0 auto;
+}
+
+.post-index .post-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.post-index .post-title img{
+    width: 250px;   
+}
+
+.post-index .post-title{
+}
+
+.post-index .post-left {
+    width: 640px;
+    margin-bottom: 50px;
+    float: left;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.post-index .post-right{
+    width: 240px;
+    margin-bottom: 50px;
+    float: right;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.6);
+}
+
+.post-index .post-left .post {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.post-index .post-left .post img{
+    width: 600px;
+}
+
+.post-index .post-left .post h2{
+    color: var(--color-primary);
+}
+
+.post-index .post-left .post span {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #0000;
+}
+
+.post-index .post-left .post p {
+    text-align: justify;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-size: 0.9em;
+}
+
+.post-index .post-right .post {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post-index .post-right .post h2{
+    background: var(--color-primary-backgroud);
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1px 0 2px 0;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.post-index .post-right .post p{
+    text-align: left;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*Personagens*/ 
+.galley{
+    width: 920px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+}
+.galley .div-columns img {
+    width: 200px;
+    padding: 10px;
+}
+
+.galley .div-columns {
+    display: inline-block;
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2);
+    padding:10px;
+    margin: 5px 0;
+}
+
+.galley .div-columns:hover {
+    background: var(--color-primary-backgroud);
+} 
+
+/*Rodapé*/
+footer {
+    text-align: center;
+}
+
+footer img { 
+    height: 230px;
+}
