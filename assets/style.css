@@ -23,7 +23,6 @@
     --body-font: "Montserrat Alternates", sans-serif;
     --biggest-font-size: 1.75rem;
     --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
     --h3-font-size: 1rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
@@ -57,23 +56,13 @@ body {
     transition: .4s;
 }
 
-h1, h2, h3 {
+h1, h3 {
     color: var(--title-color);
     font-weight: var(--font-semibold);
 }
 
-ul {
-    list-style: none;
-}
-
 a {
     text-decoration: none;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    outline: none;
 }
 
 img {
