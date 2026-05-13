@@ -11,32 +11,21 @@
     --second-hue: 219; 
 
     --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-    --first-color-alt: hsl(var(--first-hue), var(--sat), 71%);
     --title-color: hsl(var(--second-hue), 15%, 95%);
     --text-color: hsl(var(--second-hue), 8%, 75%);
-    --text-color-light: hsl(var(--second-hue), 4%, 55%);
+    --text-color-light: hsl(var(--second-hue), 8%, 65%);
     --body-color: hsl(var(--second-hue), 48%, 8%);
     --container-color: hsl(var(--second-hue), 32%, 12%);
 
     /* ====== Font and typography ====== */
-    /* .5rem == 8px | 1rem == 16px*/
     --body-font: "Montserrat Alternates", sans-serif;
     --biggest-font-size: 1.75rem;
-    --h1-font-size: 1.5rem;
-    --h3-font-size: 1rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-    --tiny-font-size: .625rem;
 
     /* ====== Font Weight ====== */
     --font-medium: 500;
     --font-semibold: 600;
-
-    /* ====== Z index ====== */
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
 }
 
 * {
@@ -50,9 +39,10 @@ html {
 }
 
 body {
+    min-height: 100vh;
     font-family: var(--body-font);
     background-color: var(--body-color);
-    color:var(--text-color);
+    color: var(--text-color);
     transition: .4s;
 }
 
@@ -73,8 +63,11 @@ img {
 /* ================ REUSABLE CSS CLASSES ================ */
 .container {
     max-width: 968px;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .grid {
@@ -87,7 +80,7 @@ img {
 }
 
 .section {
-    padding: 4.5rem 0 1rem ;
+    padding: 4.5rem 0 1rem;
 }
 
 .section-title,
@@ -96,7 +89,7 @@ img {
 }
 
 .section-title {
-    font-size: var(--h2-font-size);
+    font-size: var(--biggest-font-size);
     color: var(--first-color);
     margin-bottom: 2rem;
 }
@@ -108,16 +101,31 @@ img {
 }
 
 .work-container {
+    width: 100%;
     padding-top: 1rem;
+    justify-content: center;
+    grid-template-columns: 1fr;
 }
 
 .work-card {
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
     background-color: var(--container-color);
     padding: 1rem;
     border-radius: 1rem;
+    transition: .3s;
+}
+
+.work-card:hover {
+    transform: translateY(-.25rem);
 }
 
 .work-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     border-radius: 1rem;
     margin-bottom: .75rem;
 }
@@ -137,11 +145,91 @@ img {
     column-gap: .25rem;
 }
 
-.work-button:hover .work-icon{
+.work-button:hover .work-icon {
     transform: translateY(-.25rem);
 }
 
 .work-icon {
     font-size: 1rem;
     transition: .4s;
+}
+
+/* ================ TABLET ================ */
+@media screen and (min-width: 576px) {
+    .work-container {
+        grid-template-columns: repeat(2, 295px);
+        gap: 2rem;
+    }
+
+    .work-card {
+        max-width: 295px;
+    }
+}
+
+/* ================ DESKTOP ================ */
+@media screen and (min-width: 992px) {
+    .section {
+        padding: 3.5rem 0 1rem;
+    }
+
+    .section-title {
+        margin-bottom: 3.5rem;
+    }
+
+    .work-container {
+        grid-template-columns: repeat(3, 295px);
+        gap: 3rem;
+    }
+
+    .work-card {
+        max-width: 295px;
+        padding: 1.25rem;
+    }
+
+    .work-img {
+        margin-bottom: 1rem;
+    }
+
+    .work-title {
+        margin-bottom: .5rem;
+    }
+}
+
+/* Ajuste geral dos cards */
+.work-container {
+    justify-content: center;
+}
+
+.work-card {
+    overflow: hidden;
+}
+
+.work-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Desktop: 3 colunas centralizadas */
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 1100px;
+    }
+
+    .work-container {
+        grid-template-columns: repeat(3, 295px);
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .work-card {
+        width: 295px;
+    }
+
+    /* Centraliza o 4º card na segunda linha */
+    .work-card:nth-child(4) {
+        grid-column: 2;
+    }
+
 }
